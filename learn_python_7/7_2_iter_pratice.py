@@ -1,21 +1,15 @@
 def findMinAndMax(L):
-    if L == []:
+
+    if not L:
         return (None, None)
-    else:
-        mini = L[0]
-        maxi = L[0]
-        for i in L:
-            if i < mini:
-                mini = i
-            if i > maxi:
-                maxi = i 
-        return (mini, maxi)
-        
-
-            
-            
-
-
+    min=L[0]
+    max=L[-1]
+    for x in L:
+        if x < min:
+            min=x
+        if x > max:
+            max=x
+    return min,max
 
 
 # 测试

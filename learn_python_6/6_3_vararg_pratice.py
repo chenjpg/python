@@ -1,10 +1,13 @@
 # def mul(x, y=1,z=1,h=1):
 #     return x * y * z * h
-def mul(x,*args):
-    result =x
-    for num in args:
-        result *=num
+def mul(*args):
+    if len(args)==0:
+        raise TypeError
+    result = 1
+    for arg in args:
+        result*=arg
     return result
+
 # 测试
 print('mul(5) =', mul(5))
 print('mul(5, 6) =', mul(5, 6))
