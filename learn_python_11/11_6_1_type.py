@@ -3,7 +3,7 @@ h = Hello()
 h.hello()
 print(type(Hello))
 print(type(h))
-def fn(self,name='world'):
+def fn(self,name='Adam'):
     print('Hello,%s.'%name)
 Hello1 = type('Hello1',(object,),dict(hello=fn))# 创建Hello class
 h1 = Hello1()
@@ -93,5 +93,3 @@ class User(Model):
 
 u = User(id=12345,name='adam',email='test@orm.org',password='mypwd')
 u.save()
-
-
